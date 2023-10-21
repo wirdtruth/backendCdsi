@@ -21,10 +21,6 @@ import com.cdsi.backend.inve.models.services.IArfamcService;
 import com.cdsi.backend.inve.models.services.IArticuloService;
 import com.cdsi.backend.inve.models.services.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -205,7 +201,7 @@ public class ArfafeServiceImple implements IArfafeService {
         return arfafePage;
     }
 
-	@Override
+    /*@Override
 	public byte[] generarReporteNotaCredito(String cia, String sucursal,String tipoDoc, String noFactu) {
 		ArfafePK arfafePk = new ArfafePK(cia, tipoDoc, noFactu);
 		Arfafe arfafe = this.iArfafeRepo.findById(arfafePk).orElse(null);
@@ -249,7 +245,7 @@ public class ArfafeServiceImple implements IArfafeService {
 			}
 		}
 		return null;
-	}
+	}*/
 
 	@Override
 	public List<NotaCreditoRepoDet> listaNotaCredRepoDet(Arfafe arfafe) {
@@ -269,6 +265,12 @@ public class ArfafeServiceImple implements IArfafeService {
 			notaCredRepDets.add(notaCredRepDet);
 		}
 	    return notaCredRepDets;
+	}
+
+	@Override
+	public byte[] generarReporteNotaCredito(String cia, String sucursal, String tipo, String noFactu) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
