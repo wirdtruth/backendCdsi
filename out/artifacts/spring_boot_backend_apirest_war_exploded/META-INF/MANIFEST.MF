@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Matteo
+Build-Jdk: version 1.8.0_281
+Implementation-Title: spring-boot-backend-pvCdsi
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.cdsi.backend.inve
+Main-Class: ${start-class}
+
